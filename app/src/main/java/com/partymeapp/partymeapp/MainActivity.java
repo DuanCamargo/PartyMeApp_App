@@ -49,4 +49,12 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void goToLogin(View view) {
+
+    }
+
+    public void goToRegister(View view) {
+
+    }
 }
