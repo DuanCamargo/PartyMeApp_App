@@ -11,13 +11,21 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.partymeapp.partymeapp.MainActivity">
 
-    <ImageView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/icon"
-        android:layout_margin="10dp"
-        android:id="@+id/imageView"
-        android:contentDescription="logo_icon" />
+        android:layout_margin="@dimen/fab_margin"
+        android:id="@+id/linearLayout">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@drawable/icon"
+            android:id="@+id/imageView"
+            android:contentDescription="logo_icon" />
+    </LinearLayout>
+
 
     <EditText
         android:layout_width="wrap_content"
@@ -26,9 +34,9 @@
         android:ems="10"
         android:id="@+id/editText3"
         android:hint="First Name"
-        android:layout_below="@+id/imageView"
-        android:layout_marginTop="35dp"
-        android:layout_alignStart="@+id/imageView"
+
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
 
     <EditText
@@ -39,8 +47,8 @@
         android:id="@+id/editText4"
         android:hint="Last Name"
         android:layout_below="@+id/editText3"
-        android:layout_alignStart="@+id/imageView"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignStart="@+id/editText3"
+        android:layout_alignEnd="@+id/editText3" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -50,8 +58,8 @@
         android:id="@+id/editText5"
         android:hint="Password"
         android:layout_below="@+id/editText7"
-        android:layout_alignStart="@+id/imageView"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignStart="@+id/editText3"
+        android:layout_alignEnd="@+id/editText7" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -61,8 +69,8 @@
         android:id="@+id/editText6"
         android:hint="Re-Enter Password"
         android:layout_below="@+id/editText5"
-        android:layout_alignStart="@+id/editText5"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignStart="@+id/editText3"
+        android:layout_alignEnd="@+id/editText5" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -72,15 +80,16 @@
         android:id="@+id/editText7"
         android:hint="E-Mail"
         android:layout_below="@+id/editText4"
-        android:layout_alignStart="@+id/imageView"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignStart="@+id/editText3"
+        android:layout_alignEnd="@+id/editText4" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Registration"
-        android:id="@+id/register_button_registration"
-        android:layout_below="@+id/editText6"
-        android:layout_alignStart="@+id/editText6"
-        android:layout_alignEnd="@+id/editText6" />
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Registration"
+    android:id="@+id/register_button_registration"
+    android:layout_below="@+id/editText6"
+    android:layout_alignStart="@+id/editText3"
+    android:layout_alignEnd="@+id/editText6" />
+
 </RelativeLayout>
